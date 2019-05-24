@@ -42,6 +42,7 @@
             this.cbList.Name = "cbList";
             this.cbList.Size = new System.Drawing.Size(328, 20);
             this.cbList.TabIndex = 0;
+            this.cbList.SelectedIndexChanged += new System.EventHandler(this.CbList_SelectedIndexChanged);
             // 
             // txtList
             // 
@@ -49,6 +50,7 @@
             this.txtList.Name = "txtList";
             this.txtList.Size = new System.Drawing.Size(162, 21);
             this.txtList.TabIndex = 1;
+            this.txtList.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtList_KeyPress);
             // 
             // btnAdd
             // 
@@ -58,11 +60,12 @@
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "추가";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // lblResult
             // 
             this.lblResult.AutoSize = true;
-            this.lblResult.Location = new System.Drawing.Point(13, 67);
+            this.lblResult.Location = new System.Drawing.Point(347, 13);
             this.lblResult.Name = "lblResult";
             this.lblResult.Size = new System.Drawing.Size(69, 12);
             this.lblResult.TabIndex = 3;
@@ -72,7 +75,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(353, 216);
+            this.ClientSize = new System.Drawing.Size(548, 216);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtList);
@@ -81,6 +84,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "메뉴 선택 추가";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
